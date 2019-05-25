@@ -1,0 +1,594 @@
+html,
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+html{
+  font-size: 10px;
+}
+
+.item1 {
+  grid-area: header;
+}
+
+.item2{
+  grid-area: foxy;
+}
+
+.item3 {
+  grid-area: main;
+  font-family: 'Arvo', serif;
+}
+
+.item4 {
+  grid-area: footer;
+}
+
+.item5{
+  grid-area: info;
+
+
+
+}
+
+.grid-c
+ontainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    'header header header header'
+    'main main main main'
+    'foxy foxy foxy foxy'
+    'info info info info'
+    'footer footer footer footer';
+
+  padding: 0;
+  margin: 0;
+}
+
+.grid-container>div {
+  background-color: rgba(174, 174, 245, 1);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 2rem;
+}
+
+/* ^website and body */
+
+
+.item1 {
+
+  font-weight: bold;
+  font-family: 'Noto Sans', sans-serif;
+ 
+}
+
+/* nav bar  */
+.grid-nav1 {
+  grid-area: top;
+}
+
+.grid-nav2 {
+  grid-area: bottom;
+}
+
+.grid-nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    'top top top top'
+    'bottom bottom bottom bottom'
+    'bottom bottom bottom bottom'
+    'bottom bottom bottom bottom'
+    'bottom bottom bottom bottom';
+}
+
+.grid-nav1 {
+  box-sizing: border-box;
+  padding: 0%;
+  margin: 0%;
+
+}
+
+.flexitem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: rgba(174, 174, 245, 1);
+  box-sizing: border-box;
+  padding: 0%;
+  margin: 0%;
+  align-items: center;
+  margin-left: 5px;
+}
+
+/* nav bar link ************************************************ */
+a:link {
+  text-decoration: none;
+  font-family: 'Arvo', serif;
+  color: rgba(0, 0, 0, 0.7);
+
+}
+
+a:hover {
+  color: rgba(0, 0, 0, 1);
+  border-radius: 25px;
+  border-right: solid 3px black;
+  border-left: solid 3px black;
+  background-color: rgba(174, 174, 245, 0.2);
+}
+
+a:visited{
+  color: black;
+}
+
+
+/* nav bar link end***************************** */
+
+/* nav bar flex******************************* */
+.flexitem :nth-child(1) {
+  order: 1;
+  flex-grow: 1;
+}
+
+.flexitem :nth-child(2) {
+  order: 2;
+  flex-grow: 1;
+}
+
+.flexitem :nth-child(3) {
+  order: 3;
+  flex-grow: 1;
+}
+
+.flexitem :nth-child(4) {
+  order: 4;
+  flex-grow: 1;
+}
+
+.flexitem :nth-child(5) {
+  order: 5;
+  flex-grow: 1;
+}
+
+.flexitem :nth-child(6) {
+  order: 6;
+  flex-grow: 1;
+}
+
+.flexitem :nth-child(7) {
+  order: 7;
+  flex-grow: 5;
+
+}
+
+.image2 {
+  order: 8;
+  flex-grow: 1;
+}
+
+
+.image2 {
+  padding: 0%;
+  margin: 0%;
+  width: 1em;
+  height: 3em;
+}
+
+
+/* images end *********************************/
+
+
+
+/* first flex box****************************************** */
+.grid-nav2{
+display:flex;
+  justify-content: center;
+  align-items: center;
+flex-direction: column;
+}
+.pkids{
+  order: 1;
+}
+.kids{
+  order: 2;
+  display: flex;
+  flex-direction: row;
+ 
+}
+
+/* frist flex box end************************************** */
+
+/* second flex box**************************************** */
+.arrow{
+  width: 100px;
+  height:100px;
+  
+
+  border-top: 20px solid red;
+  border-right: 20px solid red;
+  transform: rotate(45deg);
+  order: 1;
+ margin-right: 2em;
+  margin-top: 2em;
+  border-radius: 15%;
+}
+
+.arrow2{
+  width: 100px;
+  height:100px;
+  order: 3;
+
+  border-top: 20px solid red;
+  border-right: 20px solid red;
+  transform: rotate(220deg);
+  margin-left: 2em;
+  
+  margin-top: 2em;
+  border-radius: 15%;
+}
+
+#draggable { 
+  cursor:move;
+  border: 1px solid #ccc; width: 150px; height: 150px; padding: 0.5em; 
+}
+
+.dragwrap{
+  border: 10px solid red;
+  align-self: center;
+  order: 2;
+}
+
+
+
+.drag{
+ 
+  border: 1px solid red;
+  font-size: 1em;
+}
+
+/* second felx box end********************************* */
+
+/* draggable part end****************************************************************8 */
+
+.item2{
+display: flexbox;
+justify-content: space-around;
+
+}
+input{
+  padding: 1em;
+  border-radius: 20%;
+  font-weight: bold;
+  background-color:rgb(160, 160, 160);
+ font-family: sans-serif;
+ cursor: pointer;
+}
+
+/* footer **************************************** */
+
+.item4 {
+  display: flex;
+  justify-content: center;
+}
+
+.foot1 {
+  order: 1;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  border-right: solid 3px rgb(160, 160, 160);
+ 
+}
+
+.tfoot1::after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px rgb(160, 160, 160);
+  width: 12em;
+  justify-content: center;
+}
+
+.tfoot::after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px rgb(160, 160, 160);
+  width: 12em;
+  justify-content: center;
+
+}
+
+
+.fsocial {
+  order: 2;
+  flex-grow: 1;
+  align-self: center;
+ 
+}
+
+.foot2 {
+  order: 2;
+  flex-grow: 1;
+  border-right: solid 3px rgb(160, 160, 160);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.frow {
+  display: flex;
+  flex-direction: row;
+  order: 2;
+  flex-grow: 1;
+  width: 15em;
+}
+
+.fmail1 {
+  order: 1;
+  flex-grow: 1;
+  align-self: center;
+  font-size: 1.5rem;
+  padding: 0;
+  margin: 0;
+  font-family: 'Arvo', serif;
+  text-align: left;
+}
+
+.fmail2 {
+  order: 2;
+  flex-grow: 1;
+  align-self: center;
+  font-size: 1.5rem;
+  padding: 0;
+  margin: 0;
+  font-family: 'Arvo', serif;
+  text-align: right;
+}
+
+.foot3 {
+  order: 3;
+  flex-grow: 1;
+  border-right: solid 3px rgb(160, 160, 160);
+  display: flex;
+  flex-direction: column;
+ 
+}
+.bar{
+  
+  align-self: center;
+ 
+  
+}
+
+.tfoot3::after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px rgb(160, 160, 160);
+  width: 12em;
+  justify-content: center;
+  
+}
+
+.fprice {
+  order: 2;
+  flex-grow: 1;
+  align-self: center;
+  width: 15em;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.7rem;
+}
+
+.fprice1 {
+  order: 1;
+  flex-grow: 1;
+  align-self: center;
+  text-align: left;
+}
+
+.fprice2 {
+  order: 2;
+  flex-grow: 1;
+  align-self: center;
+  text-align: right;
+}
+
+.foot4 {
+  order: 4;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.foot4>img {
+ 
+
+  margin-top: 2em;
+  width: 5em;
+  height: 5em;
+  border-radius: 15px 80px 15px 80px;
+  background-color: black;
+  transform: rotate(-45deg);
+  padding: 0%;
+
+}
+
+
+.fimg:hover {
+  border-radius: 50%;
+  background-color: gray;
+  transform: rotate(0deg);
+  transition: 1.3s
+}
+
+/* table**********************************************8 */
+
+.twrap{
+  display: flex;
+  justify-content: center;
+  font-family: sans-serif;
+  
+}
+
+
+
+.content-table {
+  border-collapse: collapse;
+  margin: 1em 0;
+  font-size: 0.9em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+  background-color:rgb(160, 160, 160);
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+  text-align: left;
+}
+
+
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid rgb(160, 160, 160);
+}
+
+.content-table tbody tr.active-row {
+  font-weight: bold;
+   background-color: #f3f3f3;
+}
+
+ 
+
+
+
+
+
+
+
+
+/* table-end**********************************************8 */
+
+
+.moto{
+  font-size: 2em;
+}
+
+
+/* media query***************************** */
+
+@media only screen and (max-width: 950px){
+
+  html{
+  font-size: 7px;
+}
+
+.moto{
+  margin-bottom: 1em;
+}
+
+.foot4{
+display: none;
+width: 0%;
+}
+
+.foot4>img {
+ width: 0%;
+margin:0;
+padding: 0;
+border-collapse: collapse;
+  
+ display: none;
+}
+
+ .foot3 {
+  border: none;
+ 
+}
+.image2 {
+  padding: 0%;
+  margin: 0%;
+  width: 2em;
+  height: 3em;
+}
+.drag{
+font-size: 1.5em;
+}
+}
+
+
+@media only screen and (max-width: 700px){
+
+html{
+  font-size: 5px;
+}
+.drag{
+font-size: 2em;
+}
+
+.item4 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+
+.foot1 {
+ 
+ font-size: 4em;
+ margin-bottom: 2em;
+}
+
+.foot2{
+  font-size: 4em;
+  margin-bottom: 2em;
+}
+.fmail1 ,.fmail2{
+  font-size: .6em;
+  
+  
+}
+
+.fmail1{
+  text-align: right;
+  margin-right: .5em;
+}
+.fmail2{
+  text-align: left;
+}
+
+.foot3{
+  font-size: 4em;
+  margin-bottom: 2em;
+}
+
+.fprice{
+font-size: .6em;
+
+}
+.moto{
+  font-size: 2em;
+}
+
+}
+
+
+
+/* media query end***************************** */
